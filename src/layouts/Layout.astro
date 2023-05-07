@@ -11,25 +11,44 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap" rel="stylesheet" />
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+
+<style lang="scss" is:global>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .btn {
+    display: flex;
+    padding: 0 30px;
+    height: 54px;
+    background: #111;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "Poppins";
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+    line-height: 18px;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+      fill: #FFF;
+      height: 18px;
+      margin-left: 5px;
+    }
+  }
 </style>

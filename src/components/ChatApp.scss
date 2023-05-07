@@ -1,0 +1,121 @@
+section.chat {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+
+
+  & > div {
+    width: 800px;
+    display: flex;
+    height: 100vh;
+    padding: 30px 0;
+    box-sizing: border-box;
+
+    aside {
+      flex: 1;
+      
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+          margin: 0 0 30px;
+        }
+      }
+
+      button {
+        border-radius: 10px;
+        border: 0;
+        width: 100%;
+        padding: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
+    main {
+      flex: 9;
+      position: relative;
+
+      .messages {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 60px;
+        margin: 0;
+        padding: 0 30px;
+        list-style-type: none;
+
+        li {
+          margin-bottom: 5px;
+
+          span {
+            background: #9575cd;
+            color: #FFF;
+            display: inline-block;
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 300;
+          }
+
+          &.from {
+            text-align: right;
+
+            span {
+              background: #4fc3f7;
+            }
+          }
+        }
+      }
+
+      footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        
+        input {
+          width: 100%;
+          border: 0;
+          background: #E8E8E8;
+          font-size: 17px;
+          padding: 15px 30px;
+          border-radius: 100px;
+          outline: 0;
+          flex: 7.5;
+          font-family: "Poppins";
+
+        }
+
+        .btn {
+          flex: 1;
+          width: 54px;
+          padding: 0;
+          margin-left: 10px;
+          border-radius: 50px;
+
+          svg {
+            height: 22px;
+            position: relative;
+            left: -2px;;
+          }
+        }
+      }
+    }
+  }
+
+  .bubble {
+    width: 80xp;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 24px;
+  }
+}
